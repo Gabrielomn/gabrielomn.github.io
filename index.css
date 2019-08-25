@@ -75,3 +75,10 @@ main p{
 header img{
     color:#66F6F1;
 }
+
+aside button{
+    background:transparent;
+    border: 0px;
+    color:#66F6F1;
+    margin:5px;
+}
