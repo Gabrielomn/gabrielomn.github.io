@@ -3,6 +3,7 @@ html, body{
     padding:0;
     box-sizing:border-box;
     background-color:#454545;
+    font-family:"Montserrat Alternates"
 }
 
 .container {
@@ -12,7 +13,7 @@ html, body{
     grid-template-columns: 1fr 12fr 1fr;
     grid-template-rows: 7vh 93vh;
     grid-template-areas: "h h h"
-                         "m m a"   
+                         ". m a"   
 }
 
 header{
@@ -40,7 +41,7 @@ aside{
     grid-area:a;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     /* grid-column-start: 2;
     grid-column-end: 3; */
 }
@@ -81,4 +82,14 @@ aside button{
     border: 0px;
     color:#66F6F1;
     margin:5px;
+}
+
+aside{
+    justify-content: center;
+}
+
+aside i{
+    color: #66F6F1;
+    font-size:45px;
+    margin:10px;
 }
