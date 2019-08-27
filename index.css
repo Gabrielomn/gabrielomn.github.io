@@ -22,8 +22,8 @@ header{
     display:flex;
     flex-direction: row;
     background:#454445;
-    box-shadow:100px;
-    /* justify-content: flex-start; */
+    
+    justify-content: flex-center;
     /* grid-column-start: 2;
     grid-column-end: 3; */
 }
@@ -62,10 +62,14 @@ aside{
     margin-left:43vw;
 }
 
-main h1{
+main h2{
     margin-top:30px;
     font-size: 5em;
     color: #66fcf1;
+}
+
+main div{
+    margin-bottom:80px;
 }
 
 main p{
@@ -95,7 +99,6 @@ aside i{
 }
 
 .fixed-top {
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -103,9 +106,46 @@ aside i{
 }
 
 .fixed-right {
-    display: flex;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-  }
+}
+
+.box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.project{
+    width: 480px;
+    height: 520px;
+    border-radius:20px;
+    color:#c4c4c4;
+    background-color:#1f2833;
+    margin:10px 10px;
+    display:grid;
+    grid-row-gap:10px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 3fr;
+    grid-template-areas: ". title ."
+                         "desc desc tech"
+                         "link link link"      
+}
+
+.projecttitle{
+    grid-area: title;
+    font-size: 30px;
+}
+
+.projectdesc{
+    grid-area: desc;
+    margin-left:8px;
+}
+
+.projecttech{
+    grid-area: tech;
+    padding-left:0;
+}
