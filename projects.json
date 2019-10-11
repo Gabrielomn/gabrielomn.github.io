@@ -1,0 +1,17 @@
+[
+    {
+        "title":"Reports Messenger Bot",
+        "description":"An app with a dashboard done with angular to manage reports to be displayed on a messenger bot.",
+        "tech":[
+            "Mongodb",
+            "Nodejs",
+            "Express",
+            "Angular"
+        ],
+        "links":{
+            "back":"https://github.com/Gabrielomn/reports-api",
+            "front":"https://github.com/Gabrielomn/reports-front",
+            "live":"https://reports-admin.herokuapp.com"
+        }
+    }
+]
