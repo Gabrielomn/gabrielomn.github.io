@@ -22,15 +22,15 @@ let insert = function (projects) {
             }
             $p.appendChild($l)
             let $links = document.createElement('div')
-            let list = getButtons(projects.links)
+            $links.className = "projectlinks"
+            let list = getButton(project.links)
             for(let i in list){
-                $links.appendChild(list[i])    
+              $links.appendChild(list[i])  
             }
             $p.appendChild($links)
             return $p
         })
         let $projectsDiv = document.querySelector('.box')
-        console.log($projects)
         for (let i in $projects){
             $projectsDiv.appendChild($projects[i])
         }
@@ -39,7 +39,6 @@ let insert = function (projects) {
 let getButton = function(link){
     let s = []
     let cont = 0
-    console.log(link)
     if(link['back']){
         let $e = document.createElement('a')
         let $img = document.createElement('img')
@@ -48,7 +47,7 @@ let getButton = function(link){
         $e.appendChild($img)
         $e.href=link['back']
 
-        s[cont] = e
+        s[cont] = $e
         cont++
     }
     if(link['front']){
@@ -58,7 +57,7 @@ let getButton = function(link){
         $img.src="./assets/front.svg"
         $e.appendChild($img)
         $e.href=link['front']
-        s[cont] = e
+        s[cont] = $e
         cont++
     }
 
@@ -69,14 +68,14 @@ let getButton = function(link){
         $img.src="./assets/site.svg"
         $e.appendChild($img)
         $e.href=link['live']
-        s[cont] = e
+        s[cont] = $e
         cont++
     }
     return s
 }
 
 let getButtons = function(links){
-    return saida = links.map(link => getButton(link))
+    return links.map(link => getButton(link))
 }
 
 fetch('projects.json').
