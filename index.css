@@ -6,6 +6,14 @@ html, body{
     font-family:"Montserrat Alternates"
 }
 
+.about a{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration:none
+}
+
+
 .container {
     display:grid;
     grid-row-gap:10px;
@@ -17,23 +25,17 @@ html, body{
 }
 
 header{
-    /* background:green; */
     grid-area:h;
     display:flex;
     flex-direction: row;
     background:#454445;
-    
     justify-content: flex-center;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
 main{
     grid-area:m;
     display:flex;
     flex-direction: column;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
 
@@ -42,8 +44,6 @@ aside{
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
 .item {
@@ -64,7 +64,7 @@ aside{
 
 main h2{
     margin-top:30px;
-    font-size: 5em;
+    font-size: 3.5em;
     color: #66fcf1;
 }
 
